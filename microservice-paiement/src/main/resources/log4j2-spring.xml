@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Configuration>
+
+
+
+<Configuration monitorInterval="60">
+
+
+	<!-- =============================================== -->
+	<!-- (00.) Proprietes generales -->
+	<!-- =============================================== -->
+	<Properties>
+		<Property name="log-path">./logExecute</Property>
+	</Properties>
+
+
+	<!-- ======================================================================= -->
+	<!-- (01.) Appenders :                                                       -->
+	<!--   - (01.A.) Chaque Appender pointe sur le fichier qui lui est associe  -->
+	<!--   - (01.B.) Chaque Appender ecrit dans ce fichier                      -->
+	<!-- ======================================================================= -->
+	<Appenders>
+		<Console name="Console-Appender" target="SYSTEM_OUT">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+		</Console>
+		
+		<File name="MPaiement-File-Appender" fileName="${log-path}/MPaiement.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+		</File>
+
+		<File name="Controller-File-Appender" fileName="${log-path}/MPaiement-controller.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+		</File>
+
+		<File name="Exception-File-Appender" fileName="${log-path}/MPaiement-exception.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+		</File>
+
+		<File name="Service-File-Appender" fileName="${log-path}/MPaiement-service.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+		</File>
+
+		<File name="Model-File-Appender" fileName="${log-path}/MPaiement-model.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+		</File>
+
+		<File name="Bean-File-Appender" fileName="${log-path}/MPaiement-bean.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+		</File>
+
+		<File name="Configuration-File-Appender" fileName="${log-path}/MPaiement-configuration.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+		</File>
+
+		<File name="SpringCloud-File-Appender" fileName="${log-path}/MPaiement-springCloud.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+		</File>
+		
+		<File name="SpringBoot-File-Appender" fileName="${log-path}/MPaiement-springBoot.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+		</File>
+		
+		<File name="SpringContext-File-Appender" fileName="${log-path}/MPaiement-springContext.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+		</File>
+	</Appenders>
+
+
+	<!-- ========================================================================== -->
+	<!-- (02.) Loggers :                                                            -->
+	<!--   - (02.A.) Chaque Logger scanne le package qui lui est associe           -->
+	<!--   - (02.B.) Chaque Logger récupère les logs qu'il trouve dans les classes -->
+	<!-- ========================================================================== -->
+	<Loggers>
+		<Logger name="com.mpaiement" level="all" additivity="true">
+			<AppenderRef ref="MPaiement-File-Appender" level="all" />
+		</Logger>
+
+		<Logger name="com.mpaiement.web.controller" level="all" additivity="true">
+			<AppenderRef ref="Controller-File-Appender" level="all" />
+		</Logger>
+
+		<Logger name="com.mpaiement.business.exception" level="all" additivity="true">
+			<AppenderRef ref="Exception-File-Appender" level="all" />
+		</Logger>
+
+		<Logger name="com.mpaiement.business.service" level="all" additivity="true">
+			<AppenderRef ref="Service-File-Appender" level="all" />
+		</Logger>
+
+		<Logger name="com.mpaiement.persistence.model" level="all" additivity="true">
+			<AppenderRef ref="Model-File-Appender" level="all" />
+		</Logger>
+
+		<Logger name="com.mpaiement.feign.bean" level="all" additivity="true">
+			<AppenderRef ref="Bean-File-Appender" level="all" />
+		</Logger>
+
+		<Logger name="com.mpaiement.feign.configuration" level="all" additivity="true">
+			<AppenderRef ref="Configuration-File-Appender" level="all" />
+		</Logger>
+
+		<Logger name="org.springframework.cloud" level="info" additivity="true">
+			<AppenderRef ref="SpringCloud-File-Appender" level="all" />
+		</Logger>
+
+		<Logger name="org.springframework.boot" level="info" additivity="true">
+			<AppenderRef ref="SpringBoot-File-Appender" level="all" />
+		</Logger>
+
+		<Logger name="org.springframework.context" level="info" additivity="true">
+			<AppenderRef ref="SpringContext-File-Appender" level="all" />
+		</Logger>
+
+		<Root>
+			<AppenderRef ref="Console-Appender" level="all" />
+		</Root>
+	</Loggers>
+
+</Configuration>

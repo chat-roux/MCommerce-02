@@ -1,0 +1,20 @@
+REM *********************************************************************************************************
+REM * (01.)CREER UN PROJET VIERGE (DONT LA STRUCTURE SOIT CONFORME AVEC MAVEN)
+REM *      ->REPERTOIRE          : '01-ProjectCreate'.
+REM *      ->FICHIER             : 'mvnProjectCreate.bat'
+REM *      ->ACTIONS A EFFECTUER : 
+REM *                              ->FAIRE POINTER UNE INVITE DE COMMANDE A LA RACINE DU WORKSPACE SOUHAITE
+REM *                              ->LANCER LA COMMANDE FOURNIE DANS CE FICHIER
+REM *                              ->EXPLORER L'ARBORESCENCE DE REPERTOIRES GENEREE PAR CETTE PROCEDURE
+REM *********************************************************************************************************
+
+
+REM *********************************************************************************************************
+REM * (02.)COMPILER LE PROJET :
+REM *      ->REPERTOIRE          : '02-ProjectGenerate'.
+REM *      ->FICHIER             : 'mvnProjectCleanInstall.bat'
+REM *      ->ACTIONS A EFFECTUER : 
+REM *                              ->FAIRE POINTER UNE INVITE DE COMMANDE A LA RACINE DU PROJET SOUHAITE
+REM *                              ->LANCER LA COMMANDE FOURNIE DANS CE FICHIER
+REM *                              ->EXPLORER L'ARBORESCENCE DE REPERTOIRES GENEREE PAR CETTE PROCEDURE
+REM *********************************************************************************************************

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>M-Commerce</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css"/>
+</head>
+<body>
+	<div class="container">
+	    <h1 class="text-center">Application M-Commerce</h1>
+	    <div class="row">
+	        <div class="col-md-4 mx-auto mt-5 text-center">
+	        	<form th:action="@{|/paiement/confirmer|}" th:method="post">
+		        	<div>
+		        		<input type="hidden" th:id="commandeId" th:name="commandeId" th:value="${paiementConfirmerView.commandeBean.id}"></input>
+		        	</div>
+		        	<div>
+		        		<label>Montant du paiement :</label>
+		        		<input type="text" th:id="commandeMontant" th:name="commandeMontant" th:value="${paiementConfirmerView.commandeBean.montant}" readonly="readonly"></input>
+		        	</div>
+		            <p>
+		                Ici l'utilisateur sélectionne en temps normal un moyen de paiement et entre les informations de sa carte bancaire.<br/>
+		                Nous allons éviter d'ajouter les formulaires nécessaireS afin de garder l'application la plus basique et simple possible pour la suite.<br/>
+		                Si vous vous sentez à l'aise, vous pouvez créer un formulaire pour accepter le numéro de la CB, que vous traiterez dans le contrôleur grâce à
+		                un <i>PostMapping</i>.
+		            </p>
+		            <!-- On passe l'id de la commande ET le montant de celle-ci afin que le contrôleur ait les informations nécessaires pour faire appel au microservice de paiement -->
+		        	<div>
+		        		<label>Numéro de carte bancaire :</label>
+		        		<input type="text" th:id="paiementCarteNumero" th:name="paiementCarteNumero" value=""/>
+		        	</div>
+		        	<div>
+		        		<input type="submit" th:id="paiementConfirmerButton" th:name="paiementConfirmerButton" value="CONFIRMER LE PAIEMENT"/>
+		        	</div>
+	        	</form>
+	        </div>
+	    </div>
+	</div>
+	<script type="text/javascript" src="http://localhost:8080/webjars/bootstrap/4.0.0-2/js/bootstrap.min.js"></script>
+</body>
+</html>
