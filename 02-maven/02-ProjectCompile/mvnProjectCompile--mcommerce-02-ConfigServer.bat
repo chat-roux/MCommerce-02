@@ -8,8 +8,8 @@ REM *      ->COPIER LE FICHIER EXECUTABLE DANS LE DEPOT MAVEN LOCAL.
 REM **********************************************************************************************************
 mvn clean install ^
  -e -X ^
- > .\logCompile\compile--mcommerce-Paiement--%date:~6,4%.%date:~3,2%.%date:~0,2%--0%time:~1,1%.%time:~3,2%.%time:~6,2%.log
+ > .\logCompile\compile--mcommerce-02-ConfigServer--%date:~6,4%.%date:~3,2%.%date:~0,2%--0%time:~1,1%.%time:~3,2%.%time:~6,2%.log
  
 mvn clean install ^
  -e -X ^
- > .\logCompile\compile--mcommerce-Paiement--%date:~6,4%.%date:~3,2%.%date:~0,2%--%time:~0,2%.%time:~3,2%.%time:~6,2%.log
+ > .\logCompile\compile--mcommerce-02-ConfigServer--%date:~6,4%.%date:~3,2%.%date:~0,2%--%time:~0,2%.%time:~3,2%.%time:~6,2%.log
