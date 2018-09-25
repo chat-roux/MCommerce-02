@@ -32,6 +32,12 @@
 			</PatternLayout>
 		</File>
 
+		<File name="Spring-File-Appender" fileName="${log-path}/ConfigServer-spring.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+		</File>
+		
 		<File name="SpringCloud-File-Appender" fileName="${log-path}/ConfigServer-springCloud.log">
 			<PatternLayout>
 				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
@@ -62,10 +68,14 @@
 			<AppenderRef ref="Console-Appender" level="all" />
 		</Root>
 
-		<Logger name="com.commerce.configserver" level="all" additivity="true">
+		<Logger name="com.mcommerce.configserver" level="all" additivity="true">
 			<AppenderRef ref="ConfigServer-File-Appender" level="all" />
 		</Logger>
 		
+		<Logger name="org.springframework" level="info" additivity="true">
+			<AppenderRef ref="Spring-File-Appender" level="all" />
+		</Logger>
+
 		<Logger name="org.springframework.cloud" level="info" additivity="true">
 			<AppenderRef ref="SpringCloud-File-Appender" level="all" />
 		</Logger>

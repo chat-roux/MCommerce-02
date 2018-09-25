@@ -1,0 +1,13 @@
+######################################################
+# ---- (01.)SPRING-CONFIGURATION ----
+######################################################
+spring:
+  # ---- SPRING-APPLICATION-NAMING-CONFIGURATION ----
+  application:
+    name: "microservice-paiement"
+
+  # ---- SPRING-CLOUD-CONFIGURATION ----
+  cloud:
+    config:
+      uri: "http://localhost:9101"
+      fail-fast: true

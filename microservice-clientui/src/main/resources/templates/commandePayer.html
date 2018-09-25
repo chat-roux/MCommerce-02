@@ -24,9 +24,6 @@
 		        		<label>Quantite commandee :</label>
 		        		<input type="text" th:id="commandeQuantite" th:name="commandeQuantite" th:value="${commandePayerView.commandeBean.quantite}"></input>
 		        	</div>
-		            <!-- p>
-		                <a th:href="@{|/paiement/${commande.id}/${montant}|}" class="font-weight-bold">Payer Ma Commande</a>
-		            </p -->
 		        	<div>
 		        		<input type="submit" th:id="payerButton" th:name="payerButton" value="PAYER LA COMMANDE"/>
 		        	</div>

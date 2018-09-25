@@ -68,6 +68,12 @@
 			</PatternLayout>
 		</File>
 
+		<File name="Spring-File-Appender" fileName="${log-path}/MPaiement-spring.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+		</File>
+		
 		<File name="SpringCloud-File-Appender" fileName="${log-path}/MPaiement-springCloud.log">
 			<PatternLayout>
 				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
@@ -94,6 +100,10 @@
 	<!--   - (02.B.) Chaque Logger récupère les logs qu'il trouve dans les classes -->
 	<!-- ========================================================================== -->
 	<Loggers>
+		<Root>
+			<AppenderRef ref="Console-Appender" level="all" />
+		</Root>
+		
 		<Logger name="com.mpaiement" level="all" additivity="true">
 			<AppenderRef ref="MPaiement-File-Appender" level="all" />
 		</Logger>
@@ -122,6 +132,10 @@
 			<AppenderRef ref="Configuration-File-Appender" level="all" />
 		</Logger>
 
+		<Logger name="org.springframework" level="info" additivity="true">
+			<AppenderRef ref="Spring-File-Appender" level="all" />
+		</Logger>
+
 		<Logger name="org.springframework.cloud" level="info" additivity="true">
 			<AppenderRef ref="SpringCloud-File-Appender" level="all" />
 		</Logger>
@@ -133,10 +147,5 @@
 		<Logger name="org.springframework.context" level="info" additivity="true">
 			<AppenderRef ref="SpringContext-File-Appender" level="all" />
 		</Logger>
-
-		<Root>
-			<AppenderRef ref="Console-Appender" level="all" />
-		</Root>
 	</Loggers>
-
 </Configuration>

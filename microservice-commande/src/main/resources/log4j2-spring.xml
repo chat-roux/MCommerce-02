@@ -32,13 +32,13 @@
 			</PatternLayout>
 		</File>
 
-		<File name="Exception-File-Appender" fileName="${log-path}/MCommande-exception.log">
+		<File name="Controller-File-Appender" fileName="${log-path}/MCommande-controller.log">
 			<PatternLayout>
 				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
 			</PatternLayout>
 		</File>
 
-		<File name="Controller-File-Appender" fileName="${log-path}/MCommande-controller.log">
+		<File name="Exception-File-Appender" fileName="${log-path}/MCommande-exception.log">
 			<PatternLayout>
 				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
 			</PatternLayout>
@@ -50,6 +50,12 @@
 			</PatternLayout>
 		</File>
 
+		<File name="Spring-File-Appender" fileName="${log-path}/MCommande-spring.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+		</File>
+		
 		<File name="SpringCloud-File-Appender" fileName="${log-path}/MCommande-springCloud.log">
 			<PatternLayout>
 				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
@@ -84,16 +90,20 @@
 			<AppenderRef ref="MCommande-File-Appender" level="all" />
 		</Logger>
 
-		<Logger name="com.mcommande.web.exception" level="all" additivity="true">
-			<AppenderRef ref="Exception-File-Appender" level="all" />
-		</Logger>
-
 		<Logger name="com.mcommande.web.controller" level="all" additivity="true">
 			<AppenderRef ref="Controller-File-Appender" level="all" />
 		</Logger>
 
-		<Logger name="com.mcommande.model" level="all" additivity="true">
+		<Logger name="com.mcommande.business.exception" level="all" additivity="true">
+			<AppenderRef ref="Exception-File-Appender" level="all" />
+		</Logger>
+
+		<Logger name="com.mcommande.persistence.model" level="all" additivity="true">
 			<AppenderRef ref="Model-File-Appender" level="all" />
+		</Logger>
+
+		<Logger name="org.springframework" level="all" additivity="true">
+			<AppenderRef ref="Spring-File-Appender" level="all" />
 		</Logger>
 
 		<Logger name="org.springframework.cloud" level="info" additivity="true">
@@ -108,5 +118,4 @@
 			<AppenderRef ref="SpringContext-File-Appender" level="all" />
 		</Logger>
 	</Loggers>
-
 </Configuration>

@@ -68,6 +68,12 @@
 			</PatternLayout>
 		</File>
 
+		<File name="Spring-File-Appender" fileName="${log-path}/MClientUI-spring.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+		</File>
+		
 		<File name="SpringCloud-File-Appender" fileName="${log-path}/MClientUI-springCloud.log">
 			<PatternLayout>
 				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
@@ -126,6 +132,10 @@
 			<AppenderRef ref="Configuration-File-Appender" level="all" />
 		</Logger>
 
+		<Logger name="org.springframework" level="info" additivity="true">
+			<AppenderRef ref="Spring-File-Appender" level="all" />
+		</Logger>
+
 		<Logger name="org.springframework.cloud" level="info" additivity="true">
 			<AppenderRef ref="SpringCloud-File-Appender" level="all" />
 		</Logger>
@@ -138,5 +148,4 @@
 			<AppenderRef ref="SpringContext-File-Appender" level="all" />
 		</Logger>
 	</Loggers>
-
 </Configuration>

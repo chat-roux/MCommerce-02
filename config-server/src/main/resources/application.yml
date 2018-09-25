@@ -1,0 +1,47 @@
+######################################################################
+# ---- (01.)SPRING-CONFIGURATION ----
+######################################################################
+spring:
+  # ---- SPRING-APPLICATION-NAMING-CONFIGURATION ----
+  application:
+    name: "config-server"
+  # ---- SPRING-CLOUD-CONFIGURATION ----
+  cloud:
+    config:
+      server:
+        git:
+          #uri: "https://github.com/chat-roux/mcommerce-config-repo.git"
+          uri: git@github.com:chat-roux/mcommerce-config-repo.git
+          clone-on-start: true
+          force-pull: true
+          ignoreLocalSshSettings: true
+          hostKey: AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==
+          hostKeyAlgorithm: ssh-rsa
+          privateKey: |
+                      -----BEGIN RSA PRIVATE KEY-----
+                      MIICXQIBAAKBgQCXcM9FsdNDSFxnet2q336bIIYu7jhwGC291naUyeFdh02rDkTG
+                      jNCjsXrr2nP5vxr4hB0ZZdrZ21nPEZkQkzwzK3ryXq9TJQ/8EfnvQQbO4XoJTyAV
+                      HReA3+N251TT0X3dGtCuq6n06PoFq5zZe+CI4K/wuQgK8TQilbjm6PTXVwIDAQAB
+                      AoGAe+rJD+RUVEfPpLT60SkTtefFJH21HLQMKbxlR5ZxnFBskz2XtUfgKTG+vWMB
+                      Zyii7xtbnD6l94HvWOqzbsariIicQbJcZ1yHXTbn1NGVE0Q7ekC4JKlRBsykS+ku
+                      8e/15K9Z33tTd5M/G4Poc3J7HUm9uSO1FQAwQrf2mM/AUHECQQDQR5UnPPdGHP8o
+                      YOiCvl7Xz48UsbUnrE/SdR5PdayoH4d0r9fmAc5m4wHqwB7hmM4TA/QaqpR4SaDF
+                      KfMRWd1tAkEAuiNmKOVLVuvC+fAygye2xQ2i94npwJfiJxIYLZL3nqbw5/wpoUuG
+                      V/jehbvqt9ixL1RYWF7adVbW5uJMpwMhUwJBAKqRpOWwePUTdCb2ThQcoYFtusiA
+                      zFHEPM6nGX6LaS16PK1kAJSd8BG0YPKGCgRI5qMN/tAD2Hk2GxK8yxHvnXUCQHqe
+                      uTz1mEUBeOc30b7O2btEOXhClQd3xtagN+dF6vPL2+WnGzGTVEP9wXFuErjb+hVI
+                      xg4pJlaoR1e/+mkHSdsCQQC5n8GWyjeb+b01fqAwnQzQJrNM8NqCW15rzOgAAXPj
+                      5/JvNsipjlTS53jBjpqUaWPMNAuL2Qu29DhO9SwUZV3W
+                      -----END RSA PRIVATE KEY-----          
+######################################################################
+# ---- (02.)SERVER-PORT-CONFIGURATION ----
+######################################################################
+server:
+  port: 9101
+
+######################################################################
+# ---- (03.)LOGGING-CONFIGURATION ----
+######################################################################
+logging:
+  config: "classpath:log4j2-spring.xml"
+  

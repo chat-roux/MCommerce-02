@@ -1,9 +1,9 @@
-package com.mcommande.dao;
+package com.mcommande.persistence.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.mcommande.model.Commande;
+import com.mcommande.persistence.model.Commande;
 
 /**
  * <b>COMPOSANT POSSEDANT LES FONCTIONNALITES CI-DESSOUS:</b><br/>

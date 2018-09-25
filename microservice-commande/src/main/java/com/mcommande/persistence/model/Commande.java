@@ -1,4 +1,4 @@
-package com.mcommande.model;
+package com.mcommande.persistence.model;
 
 
 import javax.persistence.Entity;
