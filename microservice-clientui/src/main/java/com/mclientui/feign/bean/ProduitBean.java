@@ -36,6 +36,26 @@ public class ProduitBean {
 		LOGGER.info("CLASS : ProduitBean -- METHOD : CONSTRUCTEUR SANS ARGUMENTS -- END");
 	}
 
+    /**
+     * <b>CONSTRUCTEUR AVEC 4 ARGUMENTS</b><br/>
+     * 
+     * @param pTitre Titre du produit.
+     * @param pDescription Description du produit.
+     * @param pImage Image du produit.
+     * @param pPrix Prix du produit.
+     */
+    public ProduitBean(String pTitre, String pDescription, String pImage, Double pPrix) {
+
+		LOGGER.info("CLASS : ProduitBean -- METHOD : CONSTRUCTEUR AVEC 4 ARGUMENTS -- BEGIN");
+
+        this.titre = pTitre;
+        this.description = pDescription;
+        this.image = pImage;
+        this.prix = pPrix;
+        
+		LOGGER.info("CLASS : ProduitBean -- METHOD : CONSTRUCTEUR AVEC 4 ARGUMENTS -- END");
+    }
+
 
 	public Long    getId         () { return this.id;          }
 	public String  getTitre      () { return this.titre;       }
