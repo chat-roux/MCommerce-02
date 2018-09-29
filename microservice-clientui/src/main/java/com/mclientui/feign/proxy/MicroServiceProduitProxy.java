@@ -3,6 +3,7 @@ package com.mclientui.feign.proxy;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,8 @@ import com.mclientui.feign.bean.ProduitBean;
  * @author 1603599
  *
  */
-@FeignClient(name = "microservice-produit", url = "localhost:9001")
+@RibbonClient(name = "microservice-produit")
+@FeignClient(name = "microservice-produit")
 public interface MicroServiceProduitProxy {
 	
 	@RequestMapping(value="/produit", method=RequestMethod.GET)

@@ -85,7 +85,7 @@ public class ClientController {
 	 * @param pModel L'attribut "model" de la requête.
 	 * @return String Le nom de la vue de destination.
 	 */    
-    @RequestMapping(value="/produit", method=RequestMethod.GET)
+    @RequestMapping(value="", method=RequestMethod.GET)
     public String rechercherProduitListe(Model pModel){
 
 		LOGGER.info("CLASS : ClientController -- METHOD : rechercherProduitListe -- BEGIN");

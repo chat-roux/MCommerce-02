@@ -45,7 +45,7 @@ public class Produit {
     }
 
     /**
-     * <b>CONSTRUCTEUR AVEC 5 ARGUMENTS</b><br/>
+     * <b>CONSTRUCTEUR AVEC 4 ARGUMENTS</b><br/>
      * 
      * @param pTitre Titre du produit.
      * @param pDescription Description du produit.
@@ -54,14 +54,14 @@ public class Produit {
      */
     public Produit(String pTitre, String pDescription, String pImage, Double pPrix) {
 
-		LOGGER.info("CLASS : Produit -- METHOD : CONSTRUCTEUR AVEC 5 ARGUMENTS -- BEGIN");
+		LOGGER.info("CLASS : Produit -- METHOD : CONSTRUCTEUR AVEC 4 ARGUMENTS -- BEGIN");
 
         this.titre = pTitre;
         this.description = pDescription;
         this.image = pImage;
         this.prix = pPrix;
         
-		LOGGER.info("CLASS : Produit -- METHOD : CONSTRUCTEUR AVEC 5 ARGUMENTS -- END");
+		LOGGER.info("CLASS : Produit -- METHOD : CONSTRUCTEUR AVEC 4 ARGUMENTS -- END");
     }
 
 	public Long    getId         () { return this.id;          }
