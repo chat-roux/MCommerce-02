@@ -1,5 +1,6 @@
 package com.mclientui.feign.proxy;
 
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,7 +16,8 @@ import com.mclientui.feign.bean.PaiementBean;
  * @author 1603599
  *
  */
-@FeignClient(name = "microservice-paiement", url = "localhost:9003")
+@RibbonClient(name = "microservice-paiement")
+@FeignClient(name = "microservice-paiement")
 public interface MicroServicePaiementProxy {
 	
 	@RequestMapping(value="/paiement", method=RequestMethod.POST)

@@ -6,7 +6,6 @@ import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mcommande.business.exception.CommandeCreateNotPossibleException;
 import com.mcommande.business.exception.CommandeNotFoundException;
 import com.mcommande.business.exception.CommandeUnprocessableEntityException;
+import com.mcommande.configuration.ApplicationPropertiesConfiguration;
 import com.mcommande.persistence.dao.CommandeDao;
 import com.mcommande.persistence.model.Commande;
 
@@ -52,9 +52,13 @@ public class CommandeController {
 	@Autowired
     CommandeDao commandeDao;
 	
-	@Value(value = "${ma-config}")
-	String maConfig;
-	
+	/**
+	 * <b>COMPOSANT DE CONFIGURATION DE L'APPLICATION</b><br/>
+	 * <br/>
+	 */    
+	@Autowired
+	ApplicationPropertiesConfiguration applicationPropertiesConfiguration;
+
 
     /**
 	 * <b>EFFECTUER L'OPERATION SPECIFIEE CI-DESSOUS :</b><br/>
@@ -62,7 +66,7 @@ public class CommandeController {
 	 * ->OPERATION A EFFECTUER : CREER UNE COMMANDE DANS LES DONNEES PERSISTANTES.<br/> 
 	 * ->ENTITE A UTILISER     : L'ENTITE "Commande".<br/> 
 	 *   
-	 * @param pCommande La commande à utiliser.   
+	 * @param pCommande La commande à utiliser.
 	 * @return ResponseEntity<Commande> La réponse résultant de cette création.
 	 */
     @RequestMapping(value="/commande", method=RequestMethod.POST)

@@ -2,6 +2,7 @@ package com.mclientui.feign.proxy;
 
 import java.util.Optional;
 
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,7 +19,8 @@ import com.mclientui.feign.bean.CommandeBean;
  * @author 1603599
  *
  */
-@FeignClient(name = "microservice-commande", url = "localhost:9002")
+@RibbonClient(name = "microservice-commande")
+@FeignClient(name = "microservice-commande")
 public interface MicroServiceCommandeProxy {
 	
 	@RequestMapping(value="/commande", method=RequestMethod.POST)

@@ -8,9 +8,10 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
+
 @EnableConfigurationProperties
 @EnableEurekaClient
-@EnableFeignClients
+@EnableFeignClients(basePackages="com.mclientui.feign.proxy")
 @SpringBootApplication
 public class MClientUiApplication {
 
