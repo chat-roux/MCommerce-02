@@ -82,6 +82,8 @@ public class CommandeController {
 		//       ->DANS L'OBJET FOURNI "Commande", L'ATTRIBUT "id" EST NON-NULL.
 		///////////////////////////////////////////////////////////////////////
 		if ((pCommande == null) || (pCommande.getId() != null)) {
+			LOGGER.info("ERROR : [" + MESSAGE__COMMANDE_CREER__COMMANDE_NON_VALIDE + "]");
+			LOGGER.info("CLASS : CommandeController -- METHOD : creer -- END");
 			throw new CommandeUnprocessableEntityException(MESSAGE__COMMANDE_CREER__COMMANDE_NON_VALIDE);
 		}
 		///////////////////////////////////////////////////////////////////////
@@ -97,6 +99,7 @@ public class CommandeController {
         Commande commandeCreee = commandeDao.save(pCommande);
 
         if(commandeCreee == null) {
+    		LOGGER.info("ERROR : [" + MESSAGE__COMMANDE_CREER__CREATION_IMPOSSIBLE + "]");
     		LOGGER.info("CLASS : CommandeController -- METHOD : creer -- END");
         	throw new CommandeCreateNotPossibleException(MESSAGE__COMMANDE_CREER__CREATION_IMPOSSIBLE);
         }
@@ -127,6 +130,8 @@ public class CommandeController {
 		//       ->DANS L'OBJET FOURNI "Commande", L'ATTRIBUT "id" EST NULL.
 		///////////////////////////////////////////////////////////////////////
 		if ((pCommande == null) || (pCommande.getId() == null)) {
+			LOGGER.info("ERROR : [" + MESSAGE__COMMANDE_MODIFIER__COMMANDE_NON_VALIDE + "]");
+			LOGGER.info("CLASS : CommandeController -- METHOD : modifier -- END");
 			throw new CommandeUnprocessableEntityException(MESSAGE__COMMANDE_MODIFIER__COMMANDE_NON_VALIDE);
 		}
 		///////////////////////////////////////////////////////////////////////
@@ -142,6 +147,7 @@ public class CommandeController {
         Commande commandeModifiee = commandeDao.save(pCommande);
 
         if(commandeModifiee == null) {
+    		LOGGER.info("ERROR : [" + MESSAGE__COMMANDE_MODIFIER__MODIFICATION_IMPOSSIBLE + "]");
     		LOGGER.info("CLASS : CommandeController -- METHOD : modifier -- END");
         	throw new CommandeCreateNotPossibleException(MESSAGE__COMMANDE_MODIFIER__MODIFICATION_IMPOSSIBLE);
         }
@@ -180,6 +186,7 @@ public class CommandeController {
 		//       ->L'OBJET TROUVE "Commande" EST VIDE.
 		///////////////////////////////////////////////////////////////////////
         if(!commandeOptional.isPresent()) {
+    		LOGGER.info("ERROR : [" + MESSAGE__COMMANDE_RECHERCHER_PAR_ID__COMMANDE_INTROUVABLE + "]");
     		LOGGER.info("CLASS : CommandeController -- METHOD : rechercherParId -- END");
         	throw new CommandeNotFoundException(MESSAGE__COMMANDE_RECHERCHER_PAR_ID__COMMANDE_INTROUVABLE + " -- " + "Commande-id : [" + pId + "]");
         }

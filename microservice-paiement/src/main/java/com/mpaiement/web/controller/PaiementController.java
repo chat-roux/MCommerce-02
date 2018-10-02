@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mpaiement.business.exception.PaiementUnprocessableEntityException;
+import com.mpaiement.business.exception.PaiementNotValidException;
 import com.mpaiement.business.service.CommandeService;
 import com.mpaiement.business.service.PaiementService;
 import com.mpaiement.feign.bean.CommandeBean;
@@ -75,8 +75,9 @@ public class PaiementController {
 		//       ->DANS L'OBJET FOURNI "Paiement", L'ATTRIBUT "id" EST NON-NULL.
 		///////////////////////////////////////////////////////////////////////
 		if ((pPaiement == null) || (pPaiement.getId() != null)) {
+    		LOGGER.info("ERROR : [" + MESSAGE__PAIEMENT_CREER__PAIEMENT_NON_VALIDE + "]");
     		LOGGER.info("CLASS : PaiementController -- METHOD : creer -- END");
-			throw new PaiementUnprocessableEntityException(MESSAGE__PAIEMENT_CREER__PAIEMENT_NON_VALIDE);
+			throw new PaiementNotValidException(MESSAGE__PAIEMENT_CREER__PAIEMENT_NON_VALIDE);
 		}
 		//////////////////////////////////////////////////////////////////////////////////////////////
 		//(02.)EFFECTUER L'OPERATION CI-DESSOUS :

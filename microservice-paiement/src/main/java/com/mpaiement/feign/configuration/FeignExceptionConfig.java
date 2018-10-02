@@ -25,11 +25,11 @@ public class FeignExceptionConfig {
 	
 	
 	@Bean
-	public PaiementErrorDecoder createProductErrorDecoder() {
+	public PaiementErrorDecoder createPaiementErrorDecoder() {
 		
-		LOGGER.info("CLASS : FeignExceptionConfig -- METHOD : createProductErrorDecoder -- BEGIN");
+		LOGGER.info("CLASS : FeignExceptionConfig -- METHOD : createPaiementErrorDecoder -- BEGIN");
 		PaiementErrorDecoder paiementErrorDecoder = new PaiementErrorDecoder();
-		LOGGER.info("CLASS : FeignExceptionConfig -- METHOD : createProductErrorDecoder -- END");
+		LOGGER.info("CLASS : FeignExceptionConfig -- METHOD : createPaiementErrorDecoder -- END");
 		return paiementErrorDecoder;
 	}
 }

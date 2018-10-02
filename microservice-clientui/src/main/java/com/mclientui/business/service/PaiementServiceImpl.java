@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.mclientui.business.exception.ClientUi4XXException;
+import com.mclientui.business.exception.CommandeNotFoundException;
 import com.mclientui.feign.bean.CommandeBean;
 import com.mclientui.feign.bean.PaiementBean;
 import com.mclientui.feign.proxy.MicroServiceCommandeProxy;
@@ -74,7 +74,7 @@ public class PaiementServiceImpl implements PaiementService {
 		//////////////////////////////////////////////////////////////////////////////////////////////
 		if (!commandeBeanOptional.isPresent()) {
 			LOGGER.info("CLASS : PaiementServiceImpl -- METHOD : creer -- END");
-			throw new ClientUi4XXException(MESSAGE__PAIEMENT_CREER__COMMANDE_INTROUVABLE);
+			throw new CommandeNotFoundException(MESSAGE__PAIEMENT_CREER__COMMANDE_INTROUVABLE);
 		}
 		//////////////////////////////////////////////////////////////////////////////////////////////
 		//(03.)TRAITER LE CAS NOMINAL CI-DESSOUS :

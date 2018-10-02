@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.mclientui.business.exception.ClientUi4XXException;
+import com.mclientui.business.exception.CommandeNotFoundException;
+import com.mclientui.business.exception.ProduitNotFoundException;
 import com.mclientui.business.service.CommandeService;
 import com.mclientui.business.service.PaiementService;
 import com.mclientui.business.service.ProduitService;
@@ -128,7 +129,7 @@ public class ClientControllerImpl implements ClientController {
 		try {
 			produitBean = this.produitService.rechercherParId(pId);
 			
-		} catch (ClientUi4XXException e) {
+		} catch (ProduitNotFoundException e) {
 			pModel.addAttribute("error", MESSAGE__PRODUIT_RECHERCHER_PAR_ID__PRODUIT_INTROUVABLE);
 			LOGGER.info("CLASS : ClientController -- METHOD : rechercherProduitParId -- END");
 			return "produitListe";
@@ -175,7 +176,7 @@ public class ClientControllerImpl implements ClientController {
 		try {
 			produitBean = this.produitService.rechercherParId(pProduitId);
 			
-		} catch (ClientUi4XXException e) {
+		} catch (ProduitNotFoundException e) {
 			pModel.addAttribute("error", MESSAGE__COMMANDE_CREER__PRODUIT_INTROUVABLE);
 			LOGGER.info("CLASS : ClientController -- METHOD : creerCommande -- END");
 			return "produitDetail";
@@ -192,7 +193,7 @@ public class ClientControllerImpl implements ClientController {
 		try {
 			commandeBean = this.commandeService.creer(pProduitId);
 			
-		} catch (ClientUi4XXException e) {
+		} catch (ProduitNotFoundException e) {
 			pModel.addAttribute("error", MESSAGE__COMMANDE_CREER__PRODUIT_INTROUVABLE);
 			LOGGER.info("CLASS : ClientController -- METHOD : creerCommande -- END");
 			return "produitDetail";
@@ -246,7 +247,7 @@ public class ClientControllerImpl implements ClientController {
 		try {
 			commandeBean = this.commandeService.completer(pCommandeId, pProduitPrix, pCommandeQuantite);
 			
-		} catch(ClientUi4XXException e) {
+		} catch(CommandeNotFoundException e) {
 			pModel.addAttribute("error", MESSAGE__COMMANDE_CONFIRMER__COMMANDE_INTROUVABLE);
 			LOGGER.info("CLASS : ClientController -- METHOD : confirmerCommande -- END");
 			return "commandeConfirmer";
@@ -300,7 +301,7 @@ public class ClientControllerImpl implements ClientController {
 		try {
 			paiementBean = this.paiementService.creer(pCommandeId, pCommandeMontant, pPaiementCarteNumero);
 			
-		} catch (ClientUi4XXException e) {
+		} catch (CommandeNotFoundException e) {
 			pModel.addAttribute("error", MESSAGE__PAIEMENT_CONFIRMER__COMMANDE_INTROUVABLE);
 			LOGGER.info("CLASS : ClientController -- METHOD : confirmerPaiement -- END");
 			return "paiementConfirmer";

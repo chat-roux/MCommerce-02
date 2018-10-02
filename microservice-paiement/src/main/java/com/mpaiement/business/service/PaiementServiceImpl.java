@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.mpaiement.business.exception.PaiementAlreadyExistsException;
 import com.mpaiement.business.exception.PaiementCreateNotPossibleException;
-import com.mpaiement.business.exception.PaiementUnprocessableEntityException;
+import com.mpaiement.business.exception.PaiementNotValidException;
 import com.mpaiement.persistence.dao.PaiementDao;
 import com.mpaiement.persistence.model.Paiement;
 
@@ -58,8 +58,9 @@ public class PaiementServiceImpl implements PaiementService {
 		//       ->DANS L'OBJET FOURNI "Paiement", L'ATTRIBUT "id" EST NON-NULL.
 		///////////////////////////////////////////////////////////////////////
 		if ((pPaiement == null) || (pPaiement.getId() != null)) {
+			LOGGER.info("ERROR : [" + MESSAGE__PAIEMENT_CREER__PAIEMENT_NON_VALIDE + "]");
 			LOGGER.info("CLASS : PaiementServiceImpl -- METHOD : creer -- END");
-			throw new PaiementUnprocessableEntityException(MESSAGE__PAIEMENT_CREER__PAIEMENT_NON_VALIDE);
+			throw new PaiementNotValidException(MESSAGE__PAIEMENT_CREER__PAIEMENT_NON_VALIDE);
 		}
 		//////////////////////////////////////////////////////////////////////////////////////////////
 		//(02.)EFFECTUER L'OPERATION CI-DESSOUS :
@@ -77,6 +78,7 @@ public class PaiementServiceImpl implements PaiementService {
 		//     ->TRAITEMENT   : LANCER UNE EXCEPTION SPECIFIQUE AU PROBLEME RENCONTRE.
 		///////////////////////////////////////////////////////////////////////
         if(paiementOptional.isPresent()) {
+			LOGGER.info("ERROR : [" + MESSAGE__PAIEMENT_CREER__PAIEMENT_EXISTE_DEJA + "]");
     		LOGGER.info("CLASS : PaiementServiceImpl -- METHOD : creer -- END");
         	throw new PaiementAlreadyExistsException(MESSAGE__PAIEMENT_CREER__PAIEMENT_EXISTE_DEJA);
         }	
@@ -89,6 +91,7 @@ public class PaiementServiceImpl implements PaiementService {
         Paiement paiementCree = this.paiementDao.save(pPaiement);
         
         if(paiementCree == null) {
+			LOGGER.info("ERROR : [" + MESSAGE__PAIEMENT_CREER__CREATION_IMPOSSIBLE + "]");
     		LOGGER.info("CLASS : PaiementController -- METHOD : creer -- END");
         	throw new PaiementCreateNotPossibleException(MESSAGE__PAIEMENT_CREER__CREATION_IMPOSSIBLE);
         }

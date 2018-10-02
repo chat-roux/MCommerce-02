@@ -8,17 +8,18 @@
 <body>
 	<div class="container">
 	    <h1>Application M-Commerce</h1>
+		<div class="row">
+	        <div th:each="produit : ${produitListeView.produitBeans}" class="col-md-4 my-1">
+	            <a th:href="@{|/produit/${produit.id}|}">
+	                <img th:src="${produit.image}"  class="card-img-top"/><br/>
+	            	<span th:text= "${produit.titre}"></span>
+	            </a>
+	        </div>
+	    </div>
+	    <div th:if="${error}" class="col-md-4 my-1">
+	    	<span th:text="${error}"></span>
+	    </div>
 	</div>
-	
-	<div class="row">
-        <div th:each="produit : ${produitListeView.produitBeans}" class="col-md-4 my-1">
-            <a th:href="@{|/produit/${produit.id}|}">
-                <img th:src="${produit.image}"  class="card-img-top"/><br/>
-            	<span th:text= "${produit.titre}"></span>
-            </a>
-        </div>
-    </div>
-	
 	<script type="text/javascript" src="webjars/bootstrap/4.0.0-2/js/bootstrap.min.js"></script>
 </body>
 </html>

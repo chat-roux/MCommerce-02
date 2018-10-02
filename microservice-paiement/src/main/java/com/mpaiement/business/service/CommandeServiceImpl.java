@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.mpaiement.business.exception.CommandeNotFoundException;
-import com.mpaiement.business.exception.PaiementUnprocessableEntityException;
+import com.mpaiement.business.exception.CommandeNotValidException;
 import com.mpaiement.feign.bean.CommandeBean;
 import com.mpaiement.feign.proxy.MicroServiceCommandeProxy;
 
@@ -66,6 +66,7 @@ public class CommandeServiceImpl implements CommandeService {
 		//     TRAITEMENT : LANCER UNE EXCEPTION SPECIFIQUE AU PROBLEME RENCONTRE.
 		///////////////////////////////////////////////////////////////////////
         if(!commandeBeanOptional.isPresent()) {
+    		LOGGER.info("ERROR : [" + MESSAGE__COMMANDE_RECHERCHER_PAR_ID__COMMANDE_INTROUVABLE + "]");
     		LOGGER.info("CLASS : CommandeServiceImpl -- METHOD : rechercherParId -- END");
         	throw new CommandeNotFoundException(MESSAGE__COMMANDE_RECHERCHER_PAR_ID__COMMANDE_INTROUVABLE);
         }
@@ -88,8 +89,9 @@ public class CommandeServiceImpl implements CommandeService {
 		//       ->OBJET "CommandeBean" EXISTE DEJA, AVEC LA MEME VALEUR DE L'ATTRIBUT "id".
 		///////////////////////////////////////////////////////////////////////
 		if (pCommandeBean == null) {
+    		LOGGER.info("ERROR : [" + MESSAGE__COMMANDE_FINALISER__COMMANDE_NON_VALIDE + "]");
 			LOGGER.info("CLASS : CommandeServiceImpl -- METHOD : finaliser -- END");
-			throw new PaiementUnprocessableEntityException(MESSAGE__COMMANDE_FINALISER__COMMANDE_NON_VALIDE);
+			throw new CommandeNotValidException(MESSAGE__COMMANDE_FINALISER__COMMANDE_NON_VALIDE);
 		}
 		//////////////////////////////////////////////////////////////////////////////////////////////
 		//(02.)EFFECTUER L'OPERATION CI-DESSOUS :

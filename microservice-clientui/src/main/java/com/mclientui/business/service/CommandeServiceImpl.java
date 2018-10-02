@@ -8,7 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.mclientui.business.exception.ClientUi4XXException;
+import com.mclientui.business.exception.CommandeNotFoundException;
+import com.mclientui.business.exception.ProduitNotFoundException;
 import com.mclientui.feign.bean.CommandeBean;
 import com.mclientui.feign.bean.ProduitBean;
 import com.mclientui.feign.proxy.MicroServiceCommandeProxy;
@@ -72,7 +73,7 @@ public class CommandeServiceImpl implements CommandeService {
 		//////////////////////////////////////////////////////////////////////////////////////////////
 		if (!produitBeanOptional.isPresent()) {
 			LOGGER.info("CLASS : CommandeServiceImpl -- METHOD : creer -- END");
-			throw new ClientUi4XXException(MESSAGE__COMMANDE_CREER__PRODUIT_INTROUVABLE);
+			throw new ProduitNotFoundException(MESSAGE__COMMANDE_CREER__PRODUIT_INTROUVABLE);
 		}
 		//////////////////////////////////////////////////////////////////////////////////////////////
 		//(03.)TRAITER LE CAS NOMINAL CI-DESSOUS :
@@ -110,7 +111,7 @@ public class CommandeServiceImpl implements CommandeService {
 		//////////////////////////////////////////////////////////////////////////////////////////////
 		if (!commandeBeanOptional.isPresent()) {
 			LOGGER.info("CLASS : CommandeServiceImpl -- METHOD : completer -- END");
-			throw new ClientUi4XXException(MESSAGE__COMMANDE_PAYER__COMMANDE_INTROUVABLE);
+			throw new CommandeNotFoundException(MESSAGE__COMMANDE_PAYER__COMMANDE_INTROUVABLE);
 		}
 		//////////////////////////////////////////////////////////////////////////////////////////////
 		//(03.)TRAITER LE CAS NOMINAL CI-DESSOUS :

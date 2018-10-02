@@ -1,9 +1,22 @@
 package com.mclientui.business.exception;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Set;
+import java.util.Map.Entry;
+
+import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.HttpServerErrorException;
 
 import feign.Response;
+import feign.Response.Body;
 import feign.codec.ErrorDecoder;
 
 /**
@@ -28,38 +41,44 @@ public class ClientUiErrorDecoder implements ErrorDecoder {
 
 		LOGGER.info("CLASS : ClientUiErrorDecoder -- METHOD : decode -- BEGIN");
     	
-        if((pReponse.status() >= 300) && (pReponse.status() <= 399)) {
+		HttpHeaders responseHeaders = new HttpHeaders();
+		Set<Entry<String, Collection<String>>> entrySet = pReponse.headers().entrySet();
+		
+		for(Entry<String, Collection<String>> entry : entrySet) {
+			responseHeaders.put(entry.getKey(), new ArrayList<>(entry.getValue()));
+		}
+        byte[] responseBodyBytes = null;
+        Body responseBody = pReponse.body();
+        
+		try {
+			InputStream inputStream = responseBody.asInputStream();
+        	IOUtils.readFully(inputStream, responseBodyBytes);
         	
-        	ClientUi3XXException clientUi3XXException = new ClientUi3XXException("Multiples choix");
-        	LOGGER.info("pReponse.body : " + pReponse.body());
-        	LOGGER.info("pReponse.reason : " + pReponse.reason());
-        	LOGGER.info("pReponse.request : " + pReponse.request());
-        	LOGGER.info("pReponse.toString : " + pReponse.toString());
-        	
-    		LOGGER.info("CLASS : ClientUiErrorDecoder -- METHOD : decode -- END");
-            return clientUi3XXException;
-        } 
+		} catch (IOException e1) {
+            throw new RuntimeException("Failed to process response body.", e1);
+		}
+		HttpStatus responseStatus = HttpStatus.valueOf(pReponse.status());
+        String responseReason = pReponse.reason();
+
         if((pReponse.status() >= 400) && (pReponse.status() <= 499)) {
         	
-        	ClientUi4XXException clientUi4XXException = new ClientUi4XXException("Requête incorrecte");
-        	LOGGER.info("pReponse.body : " + pReponse.body());
-        	LOGGER.info("pReponse.reason : " + pReponse.reason());
-        	LOGGER.info("pReponse.request : " + pReponse.request());
-        	LOGGER.info("pReponse.toString : " + pReponse.toString());
-        	
+        	HttpClientErrorException httpClientErrorException = new HttpClientErrorException(responseStatus
+        																					, responseReason
+        																					, responseHeaders
+        																					, responseBodyBytes
+        																					, null);
     		LOGGER.info("CLASS : ClientUiErrorDecoder -- METHOD : decode -- END");
-            return clientUi4XXException;
-        } 
+            return httpClientErrorException;
+        }
         if((pReponse.status() >= 500) && (pReponse.status() <= 599)) {
         	
-        	ClientUi5XXException clientUi5XXException = new ClientUi5XXException("Erreur interne");
-        	LOGGER.info("pReponse.body : " + pReponse.body());
-        	LOGGER.info("pReponse.reason : " + pReponse.reason());
-        	LOGGER.info("pReponse.request : " + pReponse.request());
-        	LOGGER.info("pReponse.toString : " + pReponse.toString());
-        	
-    		LOGGER.info("CLASS : ClientUiErrorDecoder -- METHOD : decode -- END");
-            return clientUi5XXException;
+        	HttpServerErrorException httpServerErrorException = new HttpServerErrorException(responseStatus
+																							, responseReason
+																							, responseHeaders
+																							, responseBodyBytes
+																							, null);
+			LOGGER.info("CLASS : ClientUiErrorDecoder -- METHOD : decode -- END");
+			return httpServerErrorException;
         } 
         Exception exception = defaultErrorDecoder.decode(pInvoqueur, pReponse);
         

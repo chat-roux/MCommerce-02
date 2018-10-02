@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mclientui.business.exception.ClientUi4XXException;
+import com.mclientui.business.exception.ProduitNotFoundException;
 import com.mclientui.feign.bean.ProduitBean;
 import com.mclientui.feign.proxy.MicroServiceProduitProxy;
 
@@ -63,7 +63,7 @@ public class ProduitServiceImpl implements ProduitService {
 		//////////////////////////////////////////////////////////////////////////////////////////////
 		if (productBeans.isEmpty()) {
 			LOGGER.info("CLASS : ProduitServiceImpl -- METHOD : rechercherTous -- END");
-			throw new ClientUi4XXException(MESSAGE__PRODUIT_RECHERCHER_TOUS__PRODUITS_INTROUVABLES);
+			throw new ProduitNotFoundException(MESSAGE__PRODUIT_RECHERCHER_TOUS__PRODUITS_INTROUVABLES);
 		}
 		LOGGER.info("CLASS : ProduitServiceImpl -- METHOD : rechercherTous -- END");
 		return productBeans;
@@ -88,7 +88,7 @@ public class ProduitServiceImpl implements ProduitService {
 		//////////////////////////////////////////////////////////////////////////////////////////////
 		if (!produitBeanOptional.isPresent()) {
 			LOGGER.info("CLASS : ProduitServiceImpl -- METHOD : rechercherParId -- END");
-			throw new ClientUi4XXException(MESSAGE__PRODUIT_RECHERCHER_PAR_ID__PRODUIT_INTROUVABLE);
+			throw new ProduitNotFoundException(MESSAGE__PRODUIT_RECHERCHER_PAR_ID__PRODUIT_INTROUVABLE);
 		}
 		//////////////////////////////////////////////////////////////////////////////////////////////
 		//(03.)TRAITER LE CAS NOMINAL CI-DESSOUS :
