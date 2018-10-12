@@ -1,0 +1,345 @@
+[INFO ] 2018-10-03 17:50:18.489 [main] ZuulServerApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2018-10-03 17:50:23.034 [main] ZuulServerApplication - Started ZuulServerApplication in 18.105 seconds (JVM running for 18.841)
+[INFO ] 2018-10-03 17:50:23.036 [main] ZuulServerApplication - CLASS : ZuulServerApplication -- METHOD : main -- END
+[INFO ] 2018-10-03 17:56:05.609 [http-nio-9103-exec-1] LogFilter - CLASS : LogFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 17:56:05.611 [http-nio-9103-exec-1] LogFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 17:56:05.611 [http-nio-9103-exec-1] LogFilter - CLASS : LogFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 18:23:57.763 [main] ZuulServerApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2018-10-03 18:24:02.322 [main] ZuulServerApplication - Started ZuulServerApplication in 7.895 seconds (JVM running for 8.582)
+[INFO ] 2018-10-03 18:24:02.324 [main] ZuulServerApplication - CLASS : ZuulServerApplication -- METHOD : main -- END
+[INFO ] 2018-10-03 18:58:45.273 [http-nio-9103-exec-2] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 18:58:45.275 [http-nio-9103-exec-2] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 18:58:45.275 [http-nio-9103-exec-2] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 18:58:46.167 [http-nio-9103-exec-2] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 18:58:46.167 [http-nio-9103-exec-2] ResponseFilter - Requete interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 18:58:46.167 [http-nio-9103-exec-2] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:26:45.381 [main] ZuulServerApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2018-10-03 19:26:49.764 [main] ZuulServerApplication - Started ZuulServerApplication in 7.538 seconds (JVM running for 8.199)
+[INFO ] 2018-10-03 19:26:49.767 [main] ZuulServerApplication - CLASS : ZuulServerApplication -- METHOD : main -- END
+[INFO ] 2018-10-03 19:32:28.671 [http-nio-9103-exec-6] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:32:28.673 [http-nio-9103-exec-6] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 19:32:28.674 [http-nio-9103-exec-6] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:32:29.971 [http-nio-9103-exec-6] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:32:29.971 [http-nio-9103-exec-6] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:32:29.971 [http-nio-9103-exec-6] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:33:29.678 [http-nio-9103-exec-8] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:33:29.678 [http-nio-9103-exec-8] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 19:33:29.678 [http-nio-9103-exec-8] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:33:30.135 [http-nio-9103-exec-8] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:33:30.135 [http-nio-9103-exec-8] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:33:30.135 [http-nio-9103-exec-8] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:33:36.716 [http-nio-9103-exec-1] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:33:36.718 [http-nio-9103-exec-1] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-produit/produit/4 
+[INFO ] 2018-10-03 19:33:36.718 [http-nio-9103-exec-1] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:33:36.748 [http-nio-9103-exec-1] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:33:36.748 [http-nio-9103-exec-1] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:33:36.749 [http-nio-9103-exec-1] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:35:38.923 [http-nio-9103-exec-2] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:35:38.923 [http-nio-9103-exec-2] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-produit/produit/4 
+[INFO ] 2018-10-03 19:35:38.923 [http-nio-9103-exec-2] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:35:38.956 [http-nio-9103-exec-2] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:35:38.956 [http-nio-9103-exec-2] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:35:38.956 [http-nio-9103-exec-2] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:35:38.960 [http-nio-9103-exec-4] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:35:38.960 [http-nio-9103-exec-4] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-produit/produit/4 
+[INFO ] 2018-10-03 19:35:38.960 [http-nio-9103-exec-4] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:35:38.975 [http-nio-9103-exec-4] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:35:38.975 [http-nio-9103-exec-4] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:35:38.975 [http-nio-9103-exec-4] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:35:39.015 [http-nio-9103-exec-5] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:35:39.015 [http-nio-9103-exec-5] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-commande/commande 
+[INFO ] 2018-10-03 19:35:39.015 [http-nio-9103-exec-5] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:35:39.336 [http-nio-9103-exec-5] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:35:39.336 [http-nio-9103-exec-5] ResponseFilter - Reponse interceptee ! Le statut est : 201 
+[INFO ] 2018-10-03 19:35:39.336 [http-nio-9103-exec-5] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:19.674 [http-nio-9103-exec-7] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:19.675 [http-nio-9103-exec-7] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-commande/commande/1 
+[INFO ] 2018-10-03 19:39:19.675 [http-nio-9103-exec-7] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:19.711 [http-nio-9103-exec-7] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:19.712 [http-nio-9103-exec-7] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:39:19.712 [http-nio-9103-exec-7] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:19.717 [http-nio-9103-exec-9] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:19.717 [http-nio-9103-exec-9] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-commande/commande 
+[INFO ] 2018-10-03 19:39:19.717 [http-nio-9103-exec-9] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:19.752 [http-nio-9103-exec-9] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:19.752 [http-nio-9103-exec-9] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:39:19.752 [http-nio-9103-exec-9] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:43.456 [http-nio-9103-exec-8] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:43.457 [http-nio-9103-exec-8] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-commande/commande/1 
+[INFO ] 2018-10-03 19:39:43.457 [http-nio-9103-exec-8] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:43.466 [http-nio-9103-exec-8] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:43.466 [http-nio-9103-exec-8] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:39:43.466 [http-nio-9103-exec-8] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:43.472 [http-nio-9103-exec-10] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:43.473 [http-nio-9103-exec-10] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-paiement/paiement 
+[INFO ] 2018-10-03 19:39:43.473 [http-nio-9103-exec-10] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:44.149 [http-nio-9103-exec-1] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:44.149 [http-nio-9103-exec-1] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-commande/commande/1 
+[INFO ] 2018-10-03 19:39:44.149 [http-nio-9103-exec-1] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:44.155 [http-nio-9103-exec-1] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:44.155 [http-nio-9103-exec-1] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:39:44.155 [http-nio-9103-exec-1] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:44.383 [http-nio-9103-exec-3] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:44.383 [http-nio-9103-exec-3] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-commande/commande/1 
+[INFO ] 2018-10-03 19:39:44.383 [http-nio-9103-exec-3] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:44.394 [http-nio-9103-exec-3] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:44.394 [http-nio-9103-exec-3] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:39:44.394 [http-nio-9103-exec-3] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:44.408 [http-nio-9103-exec-2] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:44.408 [http-nio-9103-exec-2] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-commande/commande 
+[INFO ] 2018-10-03 19:39:44.408 [http-nio-9103-exec-2] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:44.418 [http-nio-9103-exec-2] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:44.418 [http-nio-9103-exec-2] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:39:44.418 [http-nio-9103-exec-2] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:44.436 [http-nio-9103-exec-10] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:44.436 [http-nio-9103-exec-10] ResponseFilter - Reponse interceptee ! Le statut est : 201 
+[INFO ] 2018-10-03 19:39:44.436 [http-nio-9103-exec-10] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:49.757 [http-nio-9103-exec-5] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:49.758 [http-nio-9103-exec-5] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 19:39:49.758 [http-nio-9103-exec-5] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:49.774 [http-nio-9103-exec-5] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:49.775 [http-nio-9103-exec-5] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:39:49.775 [http-nio-9103-exec-5] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:51.540 [http-nio-9103-exec-6] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:51.541 [http-nio-9103-exec-6] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-produit/produit/3 
+[INFO ] 2018-10-03 19:39:51.541 [http-nio-9103-exec-6] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:51.553 [http-nio-9103-exec-6] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:51.554 [http-nio-9103-exec-6] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:39:51.554 [http-nio-9103-exec-6] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:53.859 [http-nio-9103-exec-7] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:53.859 [http-nio-9103-exec-7] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-produit/produit/3 
+[INFO ] 2018-10-03 19:39:53.859 [http-nio-9103-exec-7] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:53.871 [http-nio-9103-exec-7] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:53.871 [http-nio-9103-exec-7] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:39:53.872 [http-nio-9103-exec-7] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:53.875 [http-nio-9103-exec-9] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:53.875 [http-nio-9103-exec-9] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-produit/produit/3 
+[INFO ] 2018-10-03 19:39:53.875 [http-nio-9103-exec-9] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:53.886 [http-nio-9103-exec-9] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:53.886 [http-nio-9103-exec-9] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:39:53.886 [http-nio-9103-exec-9] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:53.891 [http-nio-9103-exec-8] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:53.891 [http-nio-9103-exec-8] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-commande/commande 
+[INFO ] 2018-10-03 19:39:53.891 [http-nio-9103-exec-8] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:53.901 [http-nio-9103-exec-8] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:53.901 [http-nio-9103-exec-8] ResponseFilter - Reponse interceptee ! Le statut est : 201 
+[INFO ] 2018-10-03 19:39:53.901 [http-nio-9103-exec-8] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:58.197 [http-nio-9103-exec-3] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:58.197 [http-nio-9103-exec-3] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-commande/commande/2 
+[INFO ] 2018-10-03 19:39:58.197 [http-nio-9103-exec-3] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:58.205 [http-nio-9103-exec-3] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:58.205 [http-nio-9103-exec-3] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:39:58.205 [http-nio-9103-exec-3] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:58.210 [http-nio-9103-exec-2] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:58.210 [http-nio-9103-exec-2] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-commande/commande 
+[INFO ] 2018-10-03 19:39:58.210 [http-nio-9103-exec-2] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:39:58.218 [http-nio-9103-exec-2] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:39:58.218 [http-nio-9103-exec-2] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:39:58.218 [http-nio-9103-exec-2] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:40:02.260 [http-nio-9103-exec-10] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:40:02.261 [http-nio-9103-exec-10] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-commande/commande/2 
+[INFO ] 2018-10-03 19:40:02.261 [http-nio-9103-exec-10] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:40:02.268 [http-nio-9103-exec-10] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:40:02.269 [http-nio-9103-exec-10] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:40:02.269 [http-nio-9103-exec-10] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:40:02.273 [http-nio-9103-exec-4] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:40:02.273 [http-nio-9103-exec-4] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-paiement/paiement 
+[INFO ] 2018-10-03 19:40:02.273 [http-nio-9103-exec-4] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:40:02.283 [http-nio-9103-exec-5] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:40:02.283 [http-nio-9103-exec-5] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-commande/commande/2 
+[INFO ] 2018-10-03 19:40:02.284 [http-nio-9103-exec-5] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:40:02.289 [http-nio-9103-exec-5] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:40:02.289 [http-nio-9103-exec-5] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:40:02.289 [http-nio-9103-exec-5] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:40:02.297 [http-nio-9103-exec-6] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:40:02.297 [http-nio-9103-exec-6] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-commande/commande/2 
+[INFO ] 2018-10-03 19:40:02.297 [http-nio-9103-exec-6] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:40:02.304 [http-nio-9103-exec-6] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:40:02.304 [http-nio-9103-exec-6] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:40:02.304 [http-nio-9103-exec-6] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:40:02.309 [http-nio-9103-exec-7] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:40:02.309 [http-nio-9103-exec-7] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-commande/commande 
+[INFO ] 2018-10-03 19:40:02.309 [http-nio-9103-exec-7] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:40:02.316 [http-nio-9103-exec-7] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:40:02.316 [http-nio-9103-exec-7] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 19:40:02.316 [http-nio-9103-exec-7] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:40:02.320 [http-nio-9103-exec-4] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 19:40:02.320 [http-nio-9103-exec-4] ResponseFilter - Reponse interceptee ! Le statut est : 201 
+[INFO ] 2018-10-03 19:40:02.320 [http-nio-9103-exec-4] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 19:53:50.954 [main] ZuulServerApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2018-10-03 19:53:56.194 [main] ZuulServerApplication - Started ZuulServerApplication in 8.336 seconds (JVM running for 9.098)
+[INFO ] 2018-10-03 19:53:56.197 [main] ZuulServerApplication - CLASS : ZuulServerApplication -- METHOD : main -- END
+[INFO ] 2018-10-03 20:34:43.091 [main] ZuulServerApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2018-10-03 20:34:47.882 [main] ZuulServerApplication - Started ZuulServerApplication in 7.975 seconds (JVM running for 8.672)
+[INFO ] 2018-10-03 20:34:47.885 [main] ZuulServerApplication - CLASS : ZuulServerApplication -- METHOD : main -- END
+[INFO ] 2018-10-03 20:37:42.146 [http-nio-9103-exec-9] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 20:37:42.148 [http-nio-9103-exec-9] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 20:37:42.148 [http-nio-9103-exec-9] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 20:37:43.378 [http-nio-9103-exec-9] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 20:37:43.379 [http-nio-9103-exec-9] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 20:37:43.379 [http-nio-9103-exec-9] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 20:38:29.063 [http-nio-9103-exec-3] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 20:38:29.064 [http-nio-9103-exec-3] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 20:38:29.064 [http-nio-9103-exec-3] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 20:38:29.084 [http-nio-9103-exec-3] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 20:38:29.084 [http-nio-9103-exec-3] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 20:38:29.084 [http-nio-9103-exec-3] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 20:43:00.465 [http-nio-9103-exec-9] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 20:43:00.465 [http-nio-9103-exec-9] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 20:43:00.465 [http-nio-9103-exec-9] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 20:43:00.829 [http-nio-9103-exec-9] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 20:43:00.829 [http-nio-9103-exec-9] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 20:43:00.829 [http-nio-9103-exec-9] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 20:46:11.072 [http-nio-9103-exec-3] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 20:46:11.072 [http-nio-9103-exec-3] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 20:46:11.072 [http-nio-9103-exec-3] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 20:46:11.088 [http-nio-9103-exec-3] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 20:46:11.088 [http-nio-9103-exec-3] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 20:46:11.088 [http-nio-9103-exec-3] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:06:14.439 [main] ZuulServerApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2018-10-03 21:06:19.240 [main] ZuulServerApplication - Started ZuulServerApplication in 8.153 seconds (JVM running for 8.835)
+[INFO ] 2018-10-03 21:06:19.242 [main] ZuulServerApplication - CLASS : ZuulServerApplication -- METHOD : main -- END
+[INFO ] 2018-10-03 21:08:10.790 [http-nio-9103-exec-1] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:08:10.792 [http-nio-9103-exec-1] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 21:08:10.792 [http-nio-9103-exec-1] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:08:11.569 [http-nio-9103-exec-2] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:08:11.570 [http-nio-9103-exec-2] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 21:08:11.570 [http-nio-9103-exec-2] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:08:11.719 [http-nio-9103-exec-1] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:08:11.719 [http-nio-9103-exec-1] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 21:08:11.719 [http-nio-9103-exec-1] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:08:11.903 [http-nio-9103-exec-2] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:08:11.903 [http-nio-9103-exec-2] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 21:08:11.903 [http-nio-9103-exec-2] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:08:21.035 [http-nio-9103-exec-4] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:08:21.035 [http-nio-9103-exec-4] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-produit/produit/3 
+[INFO ] 2018-10-03 21:08:21.035 [http-nio-9103-exec-4] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:08:21.064 [http-nio-9103-exec-4] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:08:21.064 [http-nio-9103-exec-4] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 21:08:21.064 [http-nio-9103-exec-4] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:08:31.741 [http-nio-9103-exec-6] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:08:31.741 [http-nio-9103-exec-6] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-produit/produit/3 
+[INFO ] 2018-10-03 21:08:31.741 [http-nio-9103-exec-6] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:08:31.769 [http-nio-9103-exec-6] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:08:31.770 [http-nio-9103-exec-6] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 21:08:31.770 [http-nio-9103-exec-6] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:08:31.775 [http-nio-9103-exec-7] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:08:31.775 [http-nio-9103-exec-7] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-produit/produit/3 
+[INFO ] 2018-10-03 21:08:31.776 [http-nio-9103-exec-7] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:08:31.788 [http-nio-9103-exec-7] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:08:31.789 [http-nio-9103-exec-7] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 21:08:31.789 [http-nio-9103-exec-7] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:12:21.862 [http-nio-9103-exec-10] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:12:21.864 [http-nio-9103-exec-10] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 21:12:21.864 [http-nio-9103-exec-10] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:12:21.924 [http-nio-9103-exec-10] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:12:21.924 [http-nio-9103-exec-10] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 21:12:21.924 [http-nio-9103-exec-10] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:12:25.382 [http-nio-9103-exec-1] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:12:25.382 [http-nio-9103-exec-1] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 21:12:25.382 [http-nio-9103-exec-1] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:12:25.434 [http-nio-9103-exec-1] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:12:25.434 [http-nio-9103-exec-1] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 21:12:25.434 [http-nio-9103-exec-1] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:14:33.652 [http-nio-9103-exec-4] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:14:33.652 [http-nio-9103-exec-4] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-commande/commande/3 
+[INFO ] 2018-10-03 21:14:33.652 [http-nio-9103-exec-4] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:14:34.238 [http-nio-9103-exec-4] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:14:34.239 [http-nio-9103-exec-4] ResponseFilter - Reponse interceptee ! Le statut est : 404 
+[INFO ] 2018-10-03 21:14:34.239 [http-nio-9103-exec-4] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:24:44.118 [http-nio-9103-exec-9] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:24:44.118 [http-nio-9103-exec-9] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 21:24:44.118 [http-nio-9103-exec-9] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:24:44.135 [http-nio-9103-exec-9] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:24:44.135 [http-nio-9103-exec-9] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 21:24:44.135 [http-nio-9103-exec-9] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:25:20.857 [http-nio-9103-exec-10] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:25:20.857 [http-nio-9103-exec-10] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-produit/produit/0 
+[INFO ] 2018-10-03 21:25:20.857 [http-nio-9103-exec-10] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:25:20.871 [http-nio-9103-exec-10] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:25:20.871 [http-nio-9103-exec-10] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 21:25:20.871 [http-nio-9103-exec-10] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:32:10.044 [http-nio-9103-exec-9] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:32:10.044 [http-nio-9103-exec-9] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-commande/commande/3 
+[INFO ] 2018-10-03 21:32:10.044 [http-nio-9103-exec-9] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:32:10.166 [http-nio-9103-exec-9] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:32:10.166 [http-nio-9103-exec-9] ResponseFilter - Reponse interceptee ! Le statut est : 404 
+[INFO ] 2018-10-03 21:32:10.166 [http-nio-9103-exec-9] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:51:11.438 [http-nio-9103-exec-1] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:51:11.439 [http-nio-9103-exec-1] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 21:51:11.439 [http-nio-9103-exec-1] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:51:11.498 [http-nio-9103-exec-1] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:51:11.499 [http-nio-9103-exec-1] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 21:51:11.499 [http-nio-9103-exec-1] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:51:28.193 [http-nio-9103-exec-3] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:51:28.193 [http-nio-9103-exec-3] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-produit/produit/4 
+[INFO ] 2018-10-03 21:51:28.194 [http-nio-9103-exec-3] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:51:28.209 [http-nio-9103-exec-3] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:51:28.209 [http-nio-9103-exec-3] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 21:51:28.209 [http-nio-9103-exec-3] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:53:12.849 [http-nio-9103-exec-5] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:53:12.849 [http-nio-9103-exec-5] RequestFilter - Requete interceptee ! L'URL est : http://POR7301085.exchange.ad.afpanet:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 21:53:12.849 [http-nio-9103-exec-5] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:53:12.895 [http-nio-9103-exec-5] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:53:12.895 [http-nio-9103-exec-5] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 21:53:12.895 [http-nio-9103-exec-5] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:56:35.316 [http-nio-9103-exec-7] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:56:35.316 [http-nio-9103-exec-7] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-produit/produit/0 
+[INFO ] 2018-10-03 21:56:35.316 [http-nio-9103-exec-7] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:56:35.331 [http-nio-9103-exec-7] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:56:35.331 [http-nio-9103-exec-7] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 21:56:35.331 [http-nio-9103-exec-7] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:58:00.230 [http-nio-9103-exec-1] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:58:00.230 [http-nio-9103-exec-1] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-commande/commande/3 
+[INFO ] 2018-10-03 21:58:00.230 [http-nio-9103-exec-1] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 21:58:00.282 [http-nio-9103-exec-1] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 21:58:00.282 [http-nio-9103-exec-1] ResponseFilter - Reponse interceptee ! Le statut est : 404 
+[INFO ] 2018-10-03 21:58:00.282 [http-nio-9103-exec-1] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 22:12:20.546 [http-nio-9103-exec-10] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 22:12:20.546 [http-nio-9103-exec-10] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-commande/commande/3 
+[INFO ] 2018-10-03 22:12:20.546 [http-nio-9103-exec-10] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 22:12:20.584 [http-nio-9103-exec-10] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 22:12:20.584 [http-nio-9103-exec-10] ResponseFilter - Reponse interceptee ! Le statut est : 404 
+[INFO ] 2018-10-03 22:12:20.584 [http-nio-9103-exec-10] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 22:12:30.369 [http-nio-9103-exec-1] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 22:12:30.369 [http-nio-9103-exec-1] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 22:12:30.370 [http-nio-9103-exec-1] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 22:12:30.416 [http-nio-9103-exec-1] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 22:12:30.416 [http-nio-9103-exec-1] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 22:12:30.416 [http-nio-9103-exec-1] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 22:12:38.724 [http-nio-9103-exec-2] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 22:12:38.724 [http-nio-9103-exec-2] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-commande/commande/3 
+[INFO ] 2018-10-03 22:12:38.724 [http-nio-9103-exec-2] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 22:12:38.743 [http-nio-9103-exec-2] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 22:12:38.743 [http-nio-9103-exec-2] ResponseFilter - Reponse interceptee ! Le statut est : 404 
+[INFO ] 2018-10-03 22:12:38.743 [http-nio-9103-exec-2] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 22:36:06.981 [http-nio-9103-exec-10] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 22:36:06.982 [http-nio-9103-exec-10] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-commande/commande/3 
+[INFO ] 2018-10-03 22:36:06.982 [http-nio-9103-exec-10] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 22:36:07.197 [http-nio-9103-exec-10] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 22:36:07.197 [http-nio-9103-exec-10] ResponseFilter - Reponse interceptee ! Le statut est : 404 
+[INFO ] 2018-10-03 22:36:07.197 [http-nio-9103-exec-10] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 22:46:07.331 [http-nio-9103-exec-6] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 22:46:07.331 [http-nio-9103-exec-6] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 22:46:07.331 [http-nio-9103-exec-6] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 22:46:07.372 [http-nio-9103-exec-6] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 22:46:07.372 [http-nio-9103-exec-6] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 22:46:07.372 [http-nio-9103-exec-6] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 22:46:11.402 [http-nio-9103-exec-8] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 22:46:11.403 [http-nio-9103-exec-8] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-commande/commande/3 
+[INFO ] 2018-10-03 22:46:11.403 [http-nio-9103-exec-8] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 22:46:11.432 [http-nio-9103-exec-8] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 22:46:11.433 [http-nio-9103-exec-8] ResponseFilter - Reponse interceptee ! Le statut est : 404 
+[INFO ] 2018-10-03 22:46:11.433 [http-nio-9103-exec-8] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 22:47:36.132 [http-nio-9103-exec-10] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 22:47:36.132 [http-nio-9103-exec-10] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-produit/produit 
+[INFO ] 2018-10-03 22:47:36.132 [http-nio-9103-exec-10] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 22:47:36.187 [http-nio-9103-exec-10] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 22:47:36.187 [http-nio-9103-exec-10] ResponseFilter - Reponse interceptee ! Le statut est : 200 
+[INFO ] 2018-10-03 22:47:36.187 [http-nio-9103-exec-10] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 22:47:40.817 [http-nio-9103-exec-1] RequestFilter - CLASS : RequestFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 22:47:40.817 [http-nio-9103-exec-1] RequestFilter - Requete interceptee ! L'URL est : http://localhost:9103/microservice-commande/commande/3 
+[INFO ] 2018-10-03 22:47:40.817 [http-nio-9103-exec-1] RequestFilter - CLASS : RequestFilter -- METHOD : run -- END
+[INFO ] 2018-10-03 22:47:40.840 [http-nio-9103-exec-1] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- BEGIN
+[INFO ] 2018-10-03 22:47:40.840 [http-nio-9103-exec-1] ResponseFilter - Reponse interceptee ! Le statut est : 404 
+[INFO ] 2018-10-03 22:47:40.840 [http-nio-9103-exec-1] ResponseFilter - CLASS : ResponseFilter -- METHOD : run -- END
