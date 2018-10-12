@@ -19,12 +19,12 @@ import com.mclientui.feign.bean.ProduitBean;
  *
  */
 @RibbonClient(name = "microservice-produit")
-@FeignClient(name = "microservice-produit")
+@FeignClient(name = "zuul-server")
 public interface MicroServiceProduitProxy {
 	
-	@RequestMapping(value="/produit", method=RequestMethod.GET)
+	@RequestMapping(value="/microservice-produit/produit", method=RequestMethod.GET)
 	public abstract List<ProduitBean> rechercherTous();
 
-	@RequestMapping(value = "/produit/{id}", method=RequestMethod.GET)
+	@RequestMapping(value = "/microservice-produit/produit/{id}", method=RequestMethod.GET)
 	public abstract Optional<ProduitBean> rechercherParId(@PathVariable(name="id") Long pId);
 }

@@ -17,9 +17,9 @@ import com.mclientui.feign.bean.PaiementBean;
  *
  */
 @RibbonClient(name = "microservice-paiement")
-@FeignClient(name = "microservice-paiement")
+@FeignClient(name = "zuul-server")
 public interface MicroServicePaiementProxy {
 	
-	@RequestMapping(value="/paiement", method=RequestMethod.POST)
+	@RequestMapping(value="/microservice-paiement/paiement", method=RequestMethod.POST)
 	public abstract ResponseEntity<PaiementBean> creer(@RequestBody PaiementBean pPaiementBean);
 }

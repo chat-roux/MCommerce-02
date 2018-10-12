@@ -9,8 +9,9 @@ import com.mclientui.business.exception.ClientUiErrorDecoder;
 
 
 /**
- * <b>GESTIONNAIRE DES DECODEURS D'EXCEPTIONS SPECIFIEES CI-DESSOUS :</b><br/>
- * TYPE : 'ClientUiErrorDecoder'
+ * <b>COMPOSANT QUI IMPLEMENTE LES FONCTIONNALITES CI-DESSOUS:</b><br/>
+ *    ->GESTION DES DECODEURS D'EXCEPTIONS SPECIFIES CI-DESSOUS.<br/>
+ *    ->TYPE DE DECODEURS D'EXCEPTION : 'ClientUiErrorDecoder'
  */
 @Configuration
 public class FeignExceptionConfig {
@@ -25,11 +26,11 @@ public class FeignExceptionConfig {
 	
 	
 	@Bean
-	public ClientUiErrorDecoder createProductErrorDecoder() {
+	public ClientUiErrorDecoder createErrorDecoder() {
 		
-		LOGGER.info("CLASS : FeignExceptionConfig -- METHOD : createProductErrorDecoder -- BEGIN");
+		LOGGER.info("CLASS : FeignExceptionConfig -- METHOD : createErrorDecoder -- BEGIN");
 		ClientUiErrorDecoder clientUiErrorDecoder = new ClientUiErrorDecoder();
-		LOGGER.info("CLASS : FeignExceptionConfig -- METHOD : createProductErrorDecoder -- END");
+		LOGGER.info("CLASS : FeignExceptionConfig -- METHOD : createErrorDecoder -- END");
 		return clientUiErrorDecoder;
 	}
 }
