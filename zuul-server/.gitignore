@@ -1,4 +1,7 @@
+/logCompile/
+/logExecute/
 /target/
+cmd.exe--raccourci.lnk
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
