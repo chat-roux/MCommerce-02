@@ -41,25 +41,59 @@ public class ClientUiErrorDecoder implements ErrorDecoder {
 
 		LOGGER.info("CLASS : ClientUiErrorDecoder -- METHOD : decode -- BEGIN");
     	
-		HttpHeaders responseHeaders = new HttpHeaders();
+		////////////////////////////////////////////////////////////////////////////////////////
+		// (01.)EFFECTUER L'EXTRACTION CI-DESSOUS :
+		//      ->SOURCE DE CETTE EXTRACTION  : LA REPONSE FOURNIE.
+		//      ->PRODUIT DE CETTE EXTRACTION : UNE COLLECTION DE COUPLES 'CLE-VALEUR.'
+		////////////////////////////////////////////////////////////////////////////////////////
 		Set<Entry<String, Collection<String>>> entrySet = pReponse.headers().entrySet();
 		
+		////////////////////////////////////////////////////////////////////////////////////////
+		// (02.)EFFECTUER LE TRANSVASEMENT CI-DESSOUS :
+		//      ->SOURCE DE CE TRANSVASEMENT      : LA COLLECTION EXTRAITE CI-DESSUS.
+		//      ->DESTINATION DE CE TRANSVASEMENT : UNE COLLECTION DES HEADERS ISSUS DE LA REPONSE FOURNIE.
+		////////////////////////////////////////////////////////////////////////////////////////
+		HttpHeaders responseHeaders = new HttpHeaders();
 		for(Entry<String, Collection<String>> entry : entrySet) {
-			responseHeaders.put(entry.getKey(), new ArrayList<>(entry.getValue()));
+			responseHeaders.put(entry.getKey(), new ArrayList<String>(entry.getValue()));
 		}
-        byte[] responseBodyBytes = null;
+		////////////////////////////////////////////////////////////////////////////////////////
+		// (03.)EFFECTUER LES EXTRACTIONS CI-DESSOUS :
+		//      ->SOURCE DE CES EXTRACTIONS   : LA REPONSE FOURNIE.
+		//      ->PRODUITS DE CES EXTRACTIONS : 
+		//           ->LE STATUT DE LA REPONSE
+		//           ->LA RAISON DE LA REPONSE
+		//           ->LE CORPS DE LA REPONSE
+		////////////////////////////////////////////////////////////////////////////////////////
+		HttpStatus responseStatus = HttpStatus.valueOf(pReponse.status());
+        String responseReason = pReponse.reason();
         Body responseBody = pReponse.body();
         
-		try {
-			InputStream inputStream = responseBody.asInputStream();
+        LOGGER.info("OBJECT : responseStatus -- VALUE : " + responseStatus);
+        LOGGER.info("OBJECT : responseReason -- VALUE : " + responseReason);
+        
+		////////////////////////////////////////////////////////////////////////////////////////
+		// (04.)EFFECTUER LES EXTRACTIONS CI-DESSOUS :
+		//      ->SOURCE DE CES EXTRACTIONS   : LE CORPS DE REPONSE EXTRAIT PRECEDEMMENT.
+		//      ->PRODUITS DE CES EXTRACTIONS : UN TABLEAU D'OCTETS.
+		////////////////////////////////////////////////////////////////////////////////////////
+        byte[] responseBodyBytes = null;
+		try(InputStream inputStream = responseBody.asInputStream()) {
         	IOUtils.readFully(inputStream, responseBodyBytes);
         	
 		} catch (IOException e1) {
-            throw new RuntimeException("Failed to process response body.", e1);
+    		LOGGER.info("CLASS : ClientUiErrorDecoder -- METHOD : decode -- END");
+            throw new RuntimeException("Response-body : Not processable", e1);
+            
+		} catch (NullPointerException e2) {
+    		LOGGER.info("CLASS : ClientUiErrorDecoder -- METHOD : decode -- END");
+            throw new RuntimeException("Response-body : Not present", e2);
 		}
-		HttpStatus responseStatus = HttpStatus.valueOf(pReponse.status());
-        String responseReason = pReponse.reason();
-
+		////////////////////////////////////////////////////////////////////////////////////////
+		// (05.)EFFECTUER LES TRAITEMENTS DES CAS D'ERREURS CI-DESSOUS :
+		//      ->CAS N°1   : LE STATUT DE LA REPONSE EST ENTRE 400 ET 499.
+		//      ->CAS N°2   : LE STATUT DE LA REPONSE EST ENTRE 500 ET 599.
+		////////////////////////////////////////////////////////////////////////////////////////
         if((pReponse.status() >= 400) && (pReponse.status() <= 499)) {
         	
         	HttpClientErrorException httpClientErrorException = new HttpClientErrorException(responseStatus
