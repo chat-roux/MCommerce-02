@@ -25,7 +25,13 @@
 				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
 			</PatternLayout>
 		</Console>
-		
+
+		<File name="Filter-File-Appender" fileName="${log-path}/FilterServer.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+		</File>
+
 		<File name="ZuulServer-File-Appender" fileName="${log-path}/ZuulServer.log">
 			<PatternLayout>
 				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
@@ -70,6 +76,10 @@
 
 		<Logger name="com.mcommerce.zuulserver" level="all" additivity="true">
 			<AppenderRef ref="ZuulServer-File-Appender" level="all" />
+		</Logger>
+		
+		<Logger name="com.mcommerce.zuulserver.filter" level="all" additivity="true">
+			<AppenderRef ref="Filter-File-Appender" level="all" />
 		</Logger>
 		
 		<Logger name="org.springframework" level="info" additivity="true">
