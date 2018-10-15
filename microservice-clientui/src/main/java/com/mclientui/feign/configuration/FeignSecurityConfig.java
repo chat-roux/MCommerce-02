@@ -30,6 +30,8 @@ public class FeignSecurityConfig {
 		
 		LOGGER.info("CLASS : FeignSecurityConfig -- METHOD : mBasicAuthRequestInterceptor -- BEGIN");
 		BasicAuthRequestInterceptor basicAuthRequestInterceptor = new BasicAuthRequestInterceptor("utilisateur", "mdp");
+		
+		
 		LOGGER.info("CLASS : FeignSecurityConfig -- METHOD : mBasicAuthRequestInterceptor -- END");
         return  basicAuthRequestInterceptor;
     }
