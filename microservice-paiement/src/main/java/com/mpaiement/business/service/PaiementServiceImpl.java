@@ -8,13 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.mpaiement.business.exception.PaiementAlreadyExistsException;
-import com.mpaiement.business.exception.PaiementCreateNotPossibleException;
 import com.mpaiement.business.exception.PaiementNotValidException;
 import com.mpaiement.persistence.dao.PaiementDao;
 import com.mpaiement.persistence.model.Paiement;
 
 /**
- * <b>COMPOSANT QUI IMPLEMENTE LES FONCTIONNALITES SUIVANTES :</b><br/>
+ * <b>COMPOSANT IMPLEMENTANT LES FONCTIONNALITES SUIVANTES :</b><br/>
  *    ->LES TRAITEMENTS METIER RELATIFS A L'ENTITE 'Paiement'.<br/>
  *    
  * @author 1603599
@@ -25,7 +24,6 @@ public class PaiementServiceImpl implements PaiementService {
 	
 	private static final String MESSAGE__PAIEMENT_CREER__PAIEMENT_NON_VALIDE = "Creer un paiement -- Paiement non valide";
 	private static final String MESSAGE__PAIEMENT_CREER__PAIEMENT_EXISTE_DEJA = "Creer un paiement -- Paiement existe déjà";
-	private static final String MESSAGE__PAIEMENT_CREER__CREATION_IMPOSSIBLE = "Créer un paiement -- Création impossible";
 
 	
 	/**
@@ -90,11 +88,6 @@ public class PaiementServiceImpl implements PaiementService {
 		//////////////////////////////////////////////////////////////////////////////////////////////
         Paiement paiementCree = this.paiementDao.save(pPaiement);
         
-        if(paiementCree == null) {
-			LOGGER.info("ERROR : [" + MESSAGE__PAIEMENT_CREER__CREATION_IMPOSSIBLE + "]");
-    		LOGGER.info("CLASS : PaiementController -- METHOD : creer -- END");
-        	throw new PaiementCreateNotPossibleException(MESSAGE__PAIEMENT_CREER__CREATION_IMPOSSIBLE);
-        }
 		LOGGER.info("CLASS : PaiementServiceImpl -- METHOD : creer -- END");
 		return paiementCree;
 	}

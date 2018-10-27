@@ -80,11 +80,11 @@ public class ClientUiErrorDecoder implements ErrorDecoder {
         byte[] responseBodyBytes = null;
 		try(InputStream inputStream = responseBody.asInputStream()) {
         	IOUtils.readFully(inputStream, responseBodyBytes);
-        	
+
 		} catch (IOException e1) {
     		LOGGER.info("CLASS : ClientUiErrorDecoder -- METHOD : decode -- END");
             throw new RuntimeException("Response-body : Not processable", e1);
-            
+
 		} catch (NullPointerException e2) {
     		LOGGER.info("CLASS : ClientUiErrorDecoder -- METHOD : decode -- END");
             throw new RuntimeException("Response-body : Not present", e2);
@@ -95,7 +95,7 @@ public class ClientUiErrorDecoder implements ErrorDecoder {
 		//      ->CAS N°2   : LE STATUT DE LA REPONSE EST ENTRE 500 ET 599.
 		////////////////////////////////////////////////////////////////////////////////////////
         if((pReponse.status() >= 400) && (pReponse.status() <= 499)) {
-        	
+
         	HttpClientErrorException httpClientErrorException = new HttpClientErrorException(responseStatus
         																					, responseReason
         																					, responseHeaders

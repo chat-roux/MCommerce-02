@@ -3,7 +3,7 @@ package com.mpaiement.business.service;
 import com.mpaiement.persistence.model.Paiement;
 
 /**
- * <b>INTERFACE QUI EXPOSE LES FONCTIONNALITES SUIVANTES :</b><br/>
+ * <b>INTERFACE EXPOSANT LES FONCTIONNALITES SUIVANTES :</b><br/>
  *    ->LES TRAITEMENTS METIER RELATIFS A L'ENTITE 'Paiement'.<br/>
  *    
  * @author 1603599

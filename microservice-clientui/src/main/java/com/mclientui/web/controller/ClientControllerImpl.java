@@ -307,7 +307,27 @@ public class ClientControllerImpl implements ClientController {
 			return "paiementConfirmer";
 		}
 		//////////////////////////////////////////////////////////////////////////////////////////////
-		//(02.)EFFECTUER LE TRAITEMENT NOMINAL CI-DESSOUS :
+		//(02.)EFFECTUER L'OPERATION CI-DESSOUS :
+        //
+		//     ->OPERATIONS A EFFECTUER : RECHERCHER UNE ENTITE "Commande". 
+		//     ->CRITERE DE RECHERCHE   : L'ATTRIBUT "id" DE L'ENTITE "Commande".
+		//     ->VALEUR A UTILISER      : L'ATTRIBUT "commandeId" DE L'ENTITE "Paiement" FOURNIE. 
+		//////////////////////////////////////////////////////////////////////////////////////////////
+		CommandeBean commandeBeanTrouve = this.commandeService.rechercherParId(pCommandeId);
+		
+		//////////////////////////////////////////////////////////////////////////////////////////////
+		//(03.)TRAITER LE CAS NOMINAL CI-DESSOUS :
+        //
+		//     ->CAS NOMINAL : 
+        //        ->Le paiement n'a pas été trouvé.
+        //        ->La commande a été trouvée.
+        //
+		//     ->TRAITEMENTS : Finaliser la commande.
+		//////////////////////////////////////////////////////////////////////////////////////////////
+        this.commandeService.finaliser(commandeBeanTrouve);
+        
+		//////////////////////////////////////////////////////////////////////////////////////////////
+		//(04.)EFFECTUER LE TRAITEMENT NOMINAL CI-DESSOUS :
 		//     ->CAS NOMINAL : Le paiement a été confirmé.
 		//     ->TRAITEMENTS : 
 		//        ->(03.01.)Créer un bean de vue 'paiementResultatView' (en alimentant son attribut 'paiementBean').

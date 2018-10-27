@@ -22,13 +22,17 @@ import com.mclientui.feign.bean.CommandeBean;
 @RibbonClient(name = "microservice-commande")
 @FeignClient(name = "zuul-server")
 public interface MicroServiceCommandeProxy {
-	
-	@RequestMapping(value="/microservice-commande/commande", method=RequestMethod.POST)
-	public abstract ResponseEntity<CommandeBean> creer(@RequestBody CommandeBean pCommandeBean);
-
-	@RequestMapping(value="/microservice-commande/commande", method=RequestMethod.PUT)
-	public abstract ResponseEntity<CommandeBean> modifier(@RequestBody CommandeBean pCommandeBean);
 
 	@RequestMapping(value = "/microservice-commande/commande/{id}", method=RequestMethod.GET)
 	public abstract Optional<CommandeBean> rechercherParId(@PathVariable(name="id") Long pId);
+
+	@RequestMapping(value="/microservice-commande/commande", method=RequestMethod.POST)
+	public abstract ResponseEntity<CommandeBean> creer(@RequestBody CommandeBean pCommandeBean);
+
+	@RequestMapping(value="/microservice-commande/commande/completer/{produitPrix}", method=RequestMethod.PATCH)
+	public abstract ResponseEntity<CommandeBean> completer(@PathVariable(name="produitPrix") Double pProduitPrix
+															, @RequestBody CommandeBean pCommandeBean);
+	
+	@RequestMapping(value="/microservice-commande/commande/finaliser", method=RequestMethod.PATCH)
+	public abstract ResponseEntity<CommandeBean> finaliser(@RequestBody CommandeBean pCommandeBean);
 }
